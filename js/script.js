@@ -133,7 +133,7 @@ const projects = [
         problem: "Brands require creative, visually-stunning graphics and social media layouts to stand out and convey messaging effectively on digital feeds.",
         solution: "A premium visual gallery of promotional posts, branding layouts, and corporate graphics optimized for visual readability and engagement.",
         caseStudyLink: "index.html#portfolio",
-        figmaLink: "https://www.behance.net/softfixdesign",
+        figmaLink: "https://www.figma.com/design/OZKRmQfZit5HlwYCgDhf9n/Graphics?node-id=0-1&t=zEqeX4MQJyahyEb0-0",
         slides: []
     }
 ];
@@ -2028,6 +2028,9 @@ function initProjectModal() {
         modalLoading.style.display = "none";
         modal.classList.add("show");
         document.body.style.overflow = "hidden"; // Prevent background page scroll
+
+        // --- Scroll Hint ---
+        showModalScrollHint();
     }
 
     function moveSlide(direction) {
@@ -2057,11 +2060,51 @@ function initProjectModal() {
     function closeProjectModal() {
         modal.classList.remove("show");
         document.body.style.overflow = ""; // Restore scrolling
+        hideModalScrollHint(true); // reset hint on close
         
         setTimeout(() => {
             modalBody.innerHTML = "";
         }, 500);
     }
+
+    // --- Scroll Hint Logic ---
+    const scrollHint = document.getElementById("modalScrollHint");
+    let scrollHintTimer = null;
+    let scrollHintScrolled = false;
+
+    function showModalScrollHint() {
+        if (!scrollHint) return;
+        scrollHintScrolled = false;
+        scrollHint.classList.remove("hidden", "visible");
+        // Small delay so modal entrance animation finishes first
+        setTimeout(() => {
+            scrollHint.classList.add("visible");
+            // Auto-dismiss after 4 seconds
+            scrollHintTimer = setTimeout(() => {
+                hideModalScrollHint();
+            }, 4000);
+        }, 650);
+    }
+
+    function hideModalScrollHint(instant = false) {
+        if (!scrollHint) return;
+        if (scrollHintTimer) { clearTimeout(scrollHintTimer); scrollHintTimer = null; }
+        if (instant) {
+            scrollHint.classList.remove("visible");
+            scrollHint.classList.remove("hidden");
+        } else {
+            scrollHint.classList.remove("visible");
+            scrollHint.classList.add("hidden");
+        }
+    }
+
+    // Hide hint as soon as user scrolls inside the modal
+    modal.addEventListener("scroll", () => {
+        if (!scrollHintScrolled && modal.scrollTop > 30) {
+            scrollHintScrolled = true;
+            hideModalScrollHint();
+        }
+    }, { passive: true });
 
     modalClose.addEventListener("click", closeProjectModal);
     
