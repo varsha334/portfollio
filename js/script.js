@@ -2264,15 +2264,31 @@ function initLightbox() {
         // Double click image to toggle zoom
         img.addEventListener("dblclick", (e) => {
             e.stopPropagation();
+            toggleZoom();
+        });
+
+        // Touch double-tap to toggle zoom on mobile
+        let lastTap = 0;
+        img.addEventListener("touchend", (e) => {
+            const currentTime = new Date().getTime();
+            const tapLength = currentTime - lastTap;
+            if (tapLength < 300 && tapLength > 0) {
+                e.preventDefault();
+                toggleZoom();
+            }
+            lastTap = currentTime;
+        });
+
+        function toggleZoom() {
             if (scale !== 1) {
                 resetLightbox();
             } else {
                 scale = 1.75;
                 updateTransform();
             }
-        });
+        }
         
-        // Panning dragging support when zoomed in
+        // Panning dragging support when zoomed in (Mouse)
         img.style.cursor = "grab";
         img.addEventListener("mousedown", (e) => {
             e.preventDefault();
@@ -2293,6 +2309,30 @@ function initLightbox() {
             if (isDragging) {
                 isDragging = false;
                 img.style.cursor = "grab";
+            }
+        });
+
+        // Touch swipe panning support when zoomed in (Mobile)
+        img.addEventListener("touchstart", (e) => {
+            if (e.touches.length === 1) {
+                isDragging = true;
+                startX = e.touches[0].clientX - translateX;
+                startY = e.touches[0].clientY - translateY;
+            }
+        }, { passive: true });
+        
+        window.addEventListener("touchmove", (e) => {
+            if (!isDragging) return;
+            if (e.touches.length === 1) {
+                translateX = e.touches[0].clientX - startX;
+                translateY = e.touches[0].clientY - startY;
+                updateTransform();
+            }
+        }, { passive: true });
+        
+        window.addEventListener("touchend", () => {
+            if (isDragging) {
+                isDragging = false;
             }
         });
         
