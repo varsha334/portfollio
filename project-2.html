@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case Study: AMS Asset Management & HRMS Portal design by Varsha Chaurasiya.">
+    <title>AMS Asset Management & HRMS Case Study | Varsha Chaurasiya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if (window.self !== window.top) {
+            document.documentElement.classList.add('is-iframe');
+        }
+        // Apply theme preference
+        const savedTheme = localStorage.getItem('theme') || 'dark-theme';
+        if (savedTheme === 'light-theme') {
+            document.documentElement.classList.add('light-theme');
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('light-theme');
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <!-- =====================================================
+    HEADER & NAVIGATION
+    ===================================================== -->
+    <header class="header scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">VARSHA<span>.</span></a>
+            <nav class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="index.html#portfolio" class="nav-link active">Portfolio</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="index.html" class="btn btn-secondary" style="padding: 10px 22px; font-size: 0.85rem;">Back to Portfolio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================================================
+    HERO BANNER
+    ===================================================== -->
+    <section class="project-detail-hero" style="background-image: var(--hero-overlay), radial-gradient(circle at center, rgba(46, 155, 255, 0.15), transparent 70%);">
+        <div class="container project-hero-content">
+            <a href="index.html#portfolio" class="portfolio-readmore" style="margin-bottom: 20px; cursor: pointer;">
+                <svg width="16" height="16" viewBox="0 0 24 24" style="transform: rotate(180deg);"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Back to All Projects
+            </a>
+            <span class="cs-subtitle">Dashboard / Web App</span>
+            <h1 class="hero-title" style="margin-bottom: 20px;">AMS Asset Management & HRMS Portal</h1>
+            
+            <div class="project-meta-grid">
+                <div class="project-meta-item">
+                    <h5>Role</h5>
+                    <p>UI/UX Designer</p>
+                </div>
+                <div class="project-meta-item">
+                    <h5>Duration</h5>
+                    <p>3 Months (Q3 2025)</p>
+                </div>
+                <div class="project-meta-item">
+                    <h5>Tools</h5>
+                    <p>Figma, Photoshop, Miro</p>
+                </div>
+                <div class="project-meta-item">
+                    <h5>Industry</h5>
+                    <p>Enterprise HR SaaS / Industrial</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    PROJECT OVERVIEW
+    ===================================================== -->
+    <section class="case-study-section">
+        <div class="container">
+            <div class="project-overview-grid">
+                <div class="overview-card">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        The Problem
+                    </h3>
+                    <p>Industrial grain processing plants operate on complex 3-shift rotations. The plant's manual attendance registers and legacy payroll programs caused frequent errors, delaying employee leaves verification and pay slip distribution.</p>
+                    <p>Employees had to physically visit the HR cabin to request leave status, review shift logs, or generate slip copies, creating administrative bottlenecks.</p>
+                </div>
+                <div class="overview-card">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        Business Goal
+                    </h3>
+                    <p>Centralize shift schedules, leaves tracking, and pay slips into a unified, secure dashboard.</p>
+                    <p>Decrease administrative response times by 60%, eliminate payroll slip printing overhead, and ensure transparency in daily attendance logging.</p>
+                </div>
+            </div>
+            
+            <div class="overview-card" style="margin-top: 30px;">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    The Solution
+                </h3>
+                <p>We built Dalmia Grain HRMS, a responsive web dashboard designed for admin managers and field plant workers. The interface displays active rosters, leave approval lists, a secure salary slip generator, and real-time attendance index charts with simple status labels.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    RESEARCH & STRATEGY
+    ===================================================== -->
+    <section class="case-study-section sec-alt">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Understand the User</span>
+                <h2 class="cs-title">Research & Personas</h2>
+            </div>
+            
+            <div class="persona-grid">
+                <!-- Persona 1 -->
+                <div class="persona-card">
+                    <div class="persona-header">
+                        <div class="persona-avatar">
+                            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        </div>
+                        <div class="persona-info">
+                            <h4>Ravi Verma</h4>
+                            <p>38, HR Manager | Admin user</p>
+                        </div>
+                    </div>
+                    <div class="persona-details">
+                        <div class="persona-block">
+                            <h5>Goals</h5>
+                            <ul>
+                                <li>Review shift rosters and resolve overlap conflicts instantly.</li>
+                                <li>Approve or reject leave requests in under 2 clicks.</li>
+                                <li>Generate automated salary registers at month-end.</li>
+                            </ul>
+                        </div>
+                        <div class="persona-block">
+                            <h5>Pain Points</h5>
+                            <ul>
+                                <li>Spends 3 hours daily auditing attendance logs from cards.</li>
+                                <li>Struggles with messy spreadsheets and leave conflicts.</li>
+                                <li>Flooded by duplicate queries from workers.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Persona 2 -->
+                <div class="persona-card">
+                    <div class="persona-header">
+                        <div class="persona-avatar">
+                            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        </div>
+                        <div class="persona-info">
+                            <h4>Sanjay Das</h4>
+                            <p>32, Shift Supervisor | Plant Field User</p>
+                        </div>
+                    </div>
+                    <div class="persona-details">
+                        <div class="persona-block">
+                            <h5>Goals</h5>
+                            <ul>
+                                <li>Check assigned shifts and report status from his phone.</li>
+                                <li>Request emergency leaves easily without paperwork.</li>
+                                <li>Download salary pay slips directly from the portal.</li>
+                            </ul>
+                        </div>
+                        <div class="persona-block">
+                            <h5>Pain Points</h5>
+                            <ul>
+                                <li>Lacks system visibility on pending leave status.</li>
+                                <li>Misses shift change announcements when off-site.</li>
+                                <li>Has to make frequent physical trips to administrative offices.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Journey & Flows -->
+            <div class="cs-title-wrap" style="margin-top: 60px; margin-bottom: 30px;">
+                <h3 class="cs-title" style="font-size: 1.5rem;">User Journey Mapping</h3>
+            </div>
+            
+            <div class="journey-map">
+                <table class="journey-table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>1. Access Portal</th>
+                            <th>2. Shift Roster Audit</th>
+                            <th>3. Leave Submission</th>
+                            <th>4. Payslip Generation</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>User Actions</strong></td>
+                            <td>Logs in securely via employee active directories.</td>
+                            <td>Checks assigned shift calendars.</td>
+                            <td>Selects leave window and logs request.</td>
+                            <td>Clicks slip generator button, downloads PDF file.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Thoughts</strong></td>
+                            <td>"I hope my login credentials work on this."</td>
+                            <td>"Which supervisor is on night shift today?"</td>
+                            <td>"How many leave days do I have left?"</td>
+                            <td>"I need my payslip for my home loan submission."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Experience</strong></td>
+                            <td>🤩 Secure Single Sign-On.</td>
+                            <td>🤩 Color-coded shifts grid.</td>
+                            <td>😐 Needs active balances shown.</td>
+                            <td>🤩 Instant PDF export.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cs-title-wrap" style="margin-top: 60px; margin-bottom: 30px;">
+                <h3 class="cs-title" style="font-size: 1.5rem;">Core User Flow</h3>
+            </div>
+            
+            <div class="user-flow-chart">
+                <div class="flow-node">Roster Dashboard</div>
+                <div class="flow-connector">&rarr;</div>
+                <div class="flow-node">Leave Roster Check</div>
+                <div class="flow-connector">&rarr;</div>
+                <div class="flow-node">Request Submission</div>
+                <div class="flow-connector">&rarr;</div>
+                <div class="flow-node">Admin Notification & Action</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    WIREFRAMES & ARCHITECTURE
+    ===================================================== -->
+    <section class="case-study-section">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Structure</span>
+                <h2 class="cs-title">Information Architecture & Wireframes</h2>
+            </div>
+            <p style="color: var(--text-secondary); max-width: 700px; margin-bottom: 40px; font-weight: 300;">We designed a multi-column desktop dashboard hierarchy with left sidebar navigation, quick stats on top, and detailed tables below for high density viewports.</p>
+            
+            <div class="visuals-container">
+                <!-- Wireframe 1 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder">
+                        <div class="wireframe-element title"></div>
+                        <div class="wireframe-element" style="width: 70%;"></div>
+                        <div class="wireframe-element image">
+                            <span style="font-size: 0.75rem; opacity: 0.5;"> Roster Grid Calendar</span>
+                        </div>
+                        <div class="wireframe-element"></div>
+                        <div class="wireframe-element" style="width: 60%;"></div>
+                    </div>
+                    <h5>Roster Calendar Layout</h5>
+                </div>
+                <!-- Wireframe 2 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder">
+                        <div class="wireframe-element title" style="width: 40%;"></div>
+                        <div class="wireframe-element image" style="height: 35%;">
+                            <span style="font-size: 0.75rem; opacity: 0.5;">Leave Balance Cards</span>
+                        </div>
+                        <div class="wireframe-element" style="width: 80%; height: 20px; background-color: var(--accent-dim);"></div>
+                        <div class="wireframe-element"></div>
+                        <div class="wireframe-element" style="width: 50%;"></div>
+                    </div>
+                    <h5>Leave Ledger View</h5>
+                </div>
+                <!-- Wireframe 3 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder">
+                        <div class="wireframe-element title" style="width: 60%;"></div>
+                        <div class="wireframe-element" style="height: 15px;"></div>
+                        <div class="wireframe-element" style="height: 40px; border: 1px dashed var(--accent);">
+                            <span style="font-size: 0.75rem; color: var(--accent);">Payroll slip breakdown table</span>
+                        </div>
+                        <div class="wireframe-element"></div>
+                        <div class="wireframe-element" style="width: 70%;"></div>
+                    </div>
+                    <h5>Payslip generator table</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    DESIGN SYSTEM & STYLE GUIDE
+    ===================================================== -->
+    <section class="case-study-section sec-alt">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Style Guide</span>
+                <h2 class="cs-title">Design System & Colors</h2>
+            </div>
+            
+            <div class="overview-card" style="margin-bottom: 40px;">
+                <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 15px;">Typography Standard</h4>
+                <p style="font-size: 1.5rem; font-weight: 700; color: #FFFFFF; font-family: 'Poppins', sans-serif;">Poppins - Bold, Semibold, Medium, Light</p>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 5px;">A clean geometric sans-serif that structures large numbers, stats, and reports elegantly.</p>
+            </div>
+            
+            <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 15px;">Color Palette</h4>
+            <div class="color-palette">
+                <div class="color-swatch">
+                    <div class="color-block" style="background-color: #2E9BFF;"></div>
+                    <p>Admin Blue</p>
+                    <span>#2E9BFF</span>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-block" style="background-color: #202020;"></div>
+                    <p>Card Background</p>
+                    <span>#202020</span>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-block" style="background-color: #111111;"></div>
+                    <p>Dark Background</p>
+                    <span>#111111</span>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-block" style="background-color: #FFFFFF;"></div>
+                    <p>Primary Text</p>
+                    <span>#FFFFFF</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    HIGH FIDELITY SCREENS
+    ===================================================== -->
+    <section class="case-study-section">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Visuals</span>
+                <h2 class="cs-title">High-Fidelity Screens & Prototype</h2>
+            </div>
+            
+            <div class="visuals-container">
+                <!-- Screen 1 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder" style="background: radial-gradient(circle at center, rgba(46,155,255,0.15), var(--bg-card) 70%); border: 1px solid var(--accent-dim);">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40%; height: 40%; fill: #2E9BFF;">
+                            <rect x="25" y="10" width="50" height="80" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="50" cy="20" r="4" fill="currentColor"/>
+                            <rect x="30" y="30" width="40" height="25" rx="3" fill="currentColor" opacity="0.3"/>
+                            <line x1="30" y1="62" x2="70" y2="62" stroke="currentColor" stroke-width="2"/>
+                            <line x1="30" y1="70" x2="60" y2="70" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <h4 style="margin-top: 10px; font-weight: 600; font-size: 0.9rem;">Rosters Admin Dashboard</h4>
+                    </div>
+                </div>
+                <!-- Screen 2 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder" style="background: radial-gradient(circle at center, rgba(46,155,255,0.15), var(--bg-card) 70%); border: 1px solid var(--accent-dim);">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40%; height: 40%; fill: #2E9BFF;">
+                            <rect x="25" y="10" width="50" height="80" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="50" cy="20" r="4" fill="currentColor"/>
+                            <rect x="30" y="30" width="40" height="40" rx="4" fill="currentColor" opacity="0.3"/>
+                            <rect x="35" y="75" width="30" height="8" rx="4" fill="currentColor"/>
+                        </svg>
+                        <h4 style="margin-top: 10px; font-weight: 600; font-size: 0.9rem;">Payslip Generator panel</h4>
+                    </div>
+                </div>
+                <!-- Screen 3 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder" style="background: radial-gradient(circle at center, rgba(46,155,255,0.15), var(--bg-card) 70%); border: 1px solid var(--accent-dim);">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40%; height: 40%; fill: #2E9BFF;">
+                            <rect x="25" y="10" width="50" height="80" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="50" cy="20" r="4" fill="currentColor"/>
+                            <path d="M35 50h30m-15-15v30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <h4 style="margin-top: 10px; font-weight: 600; font-size: 0.9rem;">Leave Balance ledger tracker</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="overview-card" style="margin-top: 40px; text-align: center;">
+                <h4>Figma Interactive Prototype</h4>
+                <p style="margin-bottom: 20px;">We built a high-fidelity desktop web dashboard prototype in Figma detailing all admin actions, payroll tables, and roster calendar views.</p>
+                <a href="https://figma.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open Figma Prototype</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    CHALLENGES & REFLECTIONS
+    ===================================================== -->
+    <section class="case-study-section sec-alt">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Retrospective</span>
+                <h2 class="cs-title">Challenges, Solutions & Key Learnings</h2>
+            </div>
+            
+            <div class="persona-grid">
+                <div class="persona-card">
+                    <h4 style="color: var(--accent); font-size: 1.2rem; margin-bottom: 15px;">The Challenge</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; font-weight: 300;">Admins struggled to edit shift schedules on desktop tables. Drag-and-drop actions caused layout misalignments on touch laptops, resulting in scheduling errors.</p>
+                </div>
+                <div class="persona-card">
+                    <h4 style="color: var(--accent); font-size: 1.2rem; margin-bottom: 15px;">The Solution</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; font-weight: 300;">We designed a 'double-click configuration modal' combined with clear undo/redo buttons. A side conflict indicator alerts admins instantly if a worker is scheduled for double shifts.</p>
+                </div>
+            </div>
+            
+            <div class="overview-card" style="margin-top: 30px;">
+                <h4 style="color: var(--accent); font-size: 1.2rem; margin-bottom: 10px;">Key Takeaway</h4>
+                <p>Enterprise SaaS design must prioritize data density and system safety controls. When design prevents human mistakes (like scheduling overlaps), it drives measurable business cost savings.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    CASE STUDY FOOTER NAVIGATION
+    ===================================================== -->
+    <section class="container">
+        <div class="case-study-nav">
+            <div class="cs-nav-btn prev-btn">
+                <span>Previous Project</span>
+                <a href="project-1.html">&larr; Dalmia Grower App</a>
+            </div>
+            <div class="cs-nav-btn next-btn">
+                <span>Next Project</span>
+                <a href="project-3.html">OLAM Agri Logistics &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    FOOTER
+    ===================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Varsha Chaurasiya. Case Study page.</p>
+                <p>Designed by Varsha Chaurasiya</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

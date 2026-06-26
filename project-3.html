@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case Study: OLAM Agri Logistics App design by Varsha Chaurasiya.">
+    <title>OLAM Agri Case Study | Varsha Chaurasiya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if (window.self !== window.top) {
+            document.documentElement.classList.add('is-iframe');
+        }
+        // Apply theme preference
+        const savedTheme = localStorage.getItem('theme') || 'dark-theme';
+        if (savedTheme === 'light-theme') {
+            document.documentElement.classList.add('light-theme');
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('light-theme');
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <!-- =====================================================
+    HEADER & NAVIGATION
+    ===================================================== -->
+    <header class="header scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">VARSHA<span>.</span></a>
+            <nav class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="index.html#portfolio" class="nav-link active">Portfolio</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="index.html" class="btn btn-secondary" style="padding: 10px 22px; font-size: 0.85rem;">Back to Portfolio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================================================
+    HERO BANNER
+    ===================================================== -->
+    <section class="project-detail-hero" style="background-image: var(--hero-overlay), radial-gradient(circle at center, rgba(255, 122, 0, 0.15), transparent 70%);">
+        <div class="container project-hero-content">
+            <a href="index.html#portfolio" class="portfolio-readmore" style="margin-bottom: 20px; cursor: pointer;">
+                <svg width="16" height="16" viewBox="0 0 24 24" style="transform: rotate(180deg);"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Back to All Projects
+            </a>
+            <span class="cs-subtitle">Mobile Application</span>
+            <h1 class="hero-title" style="margin-bottom: 20px;">OLAM Agri Logistics App</h1>
+            
+            <div class="project-meta-grid">
+                <div class="project-meta-item">
+                    <h5>Role</h5>
+                    <p>Lead Mobile UI/UX Designer</p>
+                </div>
+                <div class="project-meta-item">
+                    <h5>Duration</h5>
+                    <p>3 Months (Q4 2025)</p>
+                </div>
+                <div class="project-meta-item">
+                    <h5>Tools</h5>
+                    <p>Figma, Illustrator, Miro</p>
+                </div>
+                <div class="project-meta-item">
+                    <h5>Industry</h5>
+                    <p>Logistics / Commodity Trading</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    PROJECT OVERVIEW
+    ===================================================== -->
+    <section class="case-study-section">
+        <div class="container">
+            <div class="project-overview-grid">
+                <div class="overview-card">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        The Problem
+                    </h3>
+                    <p>Grain cargo transport operates in highly dynamic supply chain environments. Drivers and logistics coordinators spend hours checking transport schedules, route optimization, and bid offers via manual calls or paper manifests.</p>
+                    <p>Lack of instant bidding transparency and real-time cargo status notifications leads to vehicle idle times and lost revenue for cargo fleets.</p>
+                </div>
+                <div class="overview-card">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        Business Goal
+                    </h3>
+                    <p>Build an intuitive, responsive mobile application for truck drivers and port logistics managers that simplifies cargo bidding and real-time freight tracking.</p>
+                    <p>Reduce coordination delays by 35%, optimize cargo allocations, and secure live telemetry updates from vehicles during transit.</p>
+                </div>
+            </div>
+            
+            <div class="overview-card" style="margin-top: 30px;">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    The Solution
+                </h3>
+                <p>We designed the OLAM Agri Logistics Mobile App. The layout features live commodity bidding cards, interactive route GPS mapping coordinates, instant auction alert notifications, and simplified log templates for drivers on the road.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    RESEARCH & STRATEGY
+    ===================================================== -->
+    <section class="case-study-section sec-alt">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Understand the User</span>
+                <h2 class="cs-title">Research & Personas</h2>
+            </div>
+            
+            <div class="persona-grid">
+                <!-- Persona 1 -->
+                <div class="persona-card">
+                    <div class="persona-header">
+                        <div class="persona-avatar">
+                            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        </div>
+                        <div class="persona-info">
+                            <h4>Baldev Singh</h4>
+                            <p>45, Truck Driver | Fleet Operator</p>
+                        </div>
+                    </div>
+                    <div class="persona-details">
+                        <div class="persona-block">
+                            <h5>Goals</h5>
+                            <ul>
+                                <li>Check assigned cargo freight routes easily from his phone.</li>
+                                <li>Submit live delivery timestamps with a single tap.</li>
+                                <li>View local grain auction bids at the destination port.</li>
+                            </ul>
+                        </div>
+                        <div class="persona-block">
+                            <h5>Pain Points</h5>
+                            <ul>
+                                <li>Typing logs on roads with frequent vibrations is highly frustrating.</li>
+                                <li>Struggles with maps that fail during off-network periods.</li>
+                                <li>Loss of delivery paperwork delays his trip allowances.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Persona 2 -->
+                <div class="persona-card">
+                    <div class="persona-header">
+                        <div class="persona-avatar">
+                            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        </div>
+                        <div class="persona-info">
+                            <h4>Sarah Chen</h4>
+                            <p>31, Port Logistics Coordinator | Broker</p>
+                        </div>
+                    </div>
+                    <div class="persona-details">
+                        <div class="persona-block">
+                            <h5>Goals</h5>
+                            <ul>
+                                <li>Monitor live truck locations on a unified map board.</li>
+                                <li>Submit auction items and bids for grain cargo lots.</li>
+                                <li>Approve freight bills instantly upon driver delivery verification.</li>
+                            </ul>
+                        </div>
+                        <div class="persona-block">
+                            <h5>Pain Points</h5>
+                            <ul>
+                                <li>Spends hours calling drivers to check transit locations.</li>
+                                <li>Lacks visibility on driver arrival schedules at the port.</li>
+                                <li>Manual bidding updates cause trading discrepancies.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Journey & Flows -->
+            <div class="cs-title-wrap" style="margin-top: 60px; margin-bottom: 30px;">
+                <h3 class="cs-title" style="font-size: 1.5rem;">User Journey Mapping</h3>
+            </div>
+            
+            <div class="journey-map">
+                <table class="journey-table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>1. Bid Search</th>
+                            <th>2. Bid Placement</th>
+                            <th>3. Rerouting Check</th>
+                            <th>4. Delivery Log</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>User Actions</strong></td>
+                            <td>Reviews active commodity bids on grain auctions grid.</td>
+                            <td>Clicks bid layout and enters offer details.</td>
+                            <td>Reviews updated delivery route maps.</td>
+                            <td>Submits digital signature and delivery photos.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Thoughts</strong></td>
+                            <td>"What's the cargo bidding rate for wheat today?"</td>
+                            <td>"Can I compete with other cargo brokers?"</td>
+                            <td>"Is there a traffic bottleneck on Highway 4?"</td>
+                            <td>"Will my clearance report be processed immediately?"</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Experience</strong></td>
+                            <td>🤩 Easy filter tags.</td>
+                            <td>🤩 Quick-submit sliders.</td>
+                            <td>😐 Needs offline map cache.</td>
+                            <td>🤩 Single-tap verification.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cs-title-wrap" style="margin-top: 60px; margin-bottom: 30px;">
+                <h3 class="cs-title" style="font-size: 1.5rem;">Core User Flow</h3>
+            </div>
+            
+            <div class="user-flow-chart">
+                <div class="flow-node">Auctions Grid</div>
+                <div class="flow-connector">&rarr;</div>
+                <div class="flow-node">Place Bid Slider</div>
+                <div class="flow-connector">&rarr;</div>
+                <div class="flow-node">Accept Freight Route</div>
+                <div class="flow-connector">&rarr;</div>
+                <div class="flow-node">Tap-to-Deliver Verification</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    WIREFRAMES & ARCHITECTURE
+    ===================================================== -->
+    <section class="case-study-section">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Structure</span>
+                <h2 class="cs-title">Information Architecture & Wireframes</h2>
+            </div>
+            <p style="color: var(--text-secondary); max-width: 700px; margin-bottom: 40px; font-weight: 300;">We mapped out a high-contrast mobile design optimized for bright sunlight usage, prioritizing large buttons, a clean interface, and visual progress states.</p>
+            
+            <div class="visuals-container">
+                <!-- Wireframe 1 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder">
+                        <div class="wireframe-element title"></div>
+                        <div class="wireframe-element" style="width: 70%;"></div>
+                        <div class="wireframe-element image">
+                            <span style="font-size: 0.75rem; opacity: 0.5;">Commodity Bid Cards</span>
+                        </div>
+                        <div class="wireframe-element"></div>
+                        <div class="wireframe-element" style="width: 60%;"></div>
+                    </div>
+                    <h5>Bidding Dashboard</h5>
+                </div>
+                <!-- Wireframe 2 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder">
+                        <div class="wireframe-element title" style="width: 40%;"></div>
+                        <div class="wireframe-element image" style="height: 35%;">
+                            <span style="font-size: 0.75rem; opacity: 0.5;">Active GPS Route view</span>
+                        </div>
+                        <div class="wireframe-element" style="width: 80%; height: 20px; background-color: var(--accent-dim);"></div>
+                        <div class="wireframe-element"></div>
+                        <div class="wireframe-element" style="width: 50%;"></div>
+                    </div>
+                    <h5>Live Transit Map</h5>
+                </div>
+                <!-- Wireframe 3 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder">
+                        <div class="wireframe-element title" style="width: 60%;"></div>
+                        <div class="wireframe-element" style="height: 15px;"></div>
+                        <div class="wireframe-element" style="height: 40px; border: 1px dashed var(--accent);">
+                            <span style="font-size: 0.75rem; color: var(--accent);">Digital Signature Box</span>
+                        </div>
+                        <div class="wireframe-element"></div>
+                        <div class="wireframe-element" style="width: 70%;"></div>
+                    </div>
+                    <h5>Delivery Completion Screen</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    DESIGN SYSTEM & STYLE GUIDE
+    ===================================================== -->
+    <section class="case-study-section sec-alt">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Style Guide</span>
+                <h2 class="cs-title">Design System & Colors</h2>
+            </div>
+            
+            <div class="overview-card" style="margin-bottom: 40px;">
+                <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 15px;">Typography Standard</h4>
+                <p style="font-size: 1.5rem; font-weight: 700; color: #FFFFFF; font-family: 'Poppins', sans-serif;">Poppins - Bold, Semibold, Medium, Light</p>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 5px;">A clean geometric sans-serif that structures large numbers, stats, and reports elegantly.</p>
+            </div>
+            
+            <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 15px;">Color Palette</h4>
+            <div class="color-palette">
+                <div class="color-swatch">
+                    <div class="color-block" style="background-color: #FF7A00;"></div>
+                    <p>Alert Orange</p>
+                    <span>#FF7A00</span>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-block" style="background-color: #202020;"></div>
+                    <p>Card Background</p>
+                    <span>#202020</span>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-block" style="background-color: #111111;"></div>
+                    <p>Dark Background</p>
+                    <span>#111111</span>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-block" style="background-color: #FFFFFF;"></div>
+                    <p>Primary Text</p>
+                    <span>#FFFFFF</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    HIGH FIDELITY SCREENS
+    ===================================================== -->
+    <section class="case-study-section">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Visuals</span>
+                <h2 class="cs-title">High-Fidelity Screens & Prototype</h2>
+            </div>
+            
+            <div class="visuals-container">
+                <!-- Screen 1 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder" style="background: radial-gradient(circle at center, rgba(255,122,0,0.15), var(--bg-card) 70%); border: 1px solid var(--accent-dim);">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40%; height: 40%; fill: var(--accent);">
+                            <rect x="25" y="10" width="50" height="80" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="50" cy="20" r="4" fill="currentColor"/>
+                            <rect x="30" y="30" width="40" height="25" rx="3" fill="currentColor" opacity="0.3"/>
+                            <line x1="30" y1="62" x2="70" y2="62" stroke="currentColor" stroke-width="2"/>
+                            <line x1="30" y1="70" x2="60" y2="70" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <h4 style="margin-top: 10px; font-weight: 600; font-size: 0.9rem;">Port Bidding Grid</h4>
+                    </div>
+                </div>
+                <!-- Screen 2 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder" style="background: radial-gradient(circle at center, rgba(255,122,0,0.15), var(--bg-card) 70%); border: 1px solid var(--accent-dim);">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40%; height: 40%; fill: var(--accent);">
+                            <rect x="25" y="10" width="50" height="80" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="50" cy="20" r="4" fill="currentColor"/>
+                            <rect x="30" y="30" width="40" height="40" rx="4" fill="currentColor" opacity="0.3"/>
+                            <rect x="35" y="75" width="30" height="8" rx="4" fill="currentColor"/>
+                        </svg>
+                        <h4 style="margin-top: 10px; font-weight: 600; font-size: 0.9rem;">Live Route Tracker Map</h4>
+                    </div>
+                </div>
+                <!-- Screen 3 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder" style="background: radial-gradient(circle at center, rgba(255,122,0,0.15), var(--bg-card) 70%); border: 1px solid var(--accent-dim);">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40%; height: 40%; fill: var(--accent);">
+                            <rect x="25" y="10" width="50" height="80" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="50" cy="20" r="4" fill="currentColor"/>
+                            <path d="M35 50h30m-15-15v30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <h4 style="margin-top: 10px; font-weight: 600; font-size: 0.9rem;">Bidding Confirmation</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="overview-card" style="margin-top: 40px; text-align: center;">
+                <h4>Figma Interactive Prototype</h4>
+                <p style="margin-bottom: 20px;">We built a high-fidelity mobile prototype in Figma detailing all auction cards, map navigation transitions, and bidding confirmation slides.</p>
+                <a href="https://figma.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open Figma Prototype</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    CHALLENGES & REFLECTIONS
+    ===================================================== -->
+    <section class="case-study-section sec-alt">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Retrospective</span>
+                <h2 class="cs-title">Challenges, Solutions & Key Learnings</h2>
+            </div>
+            
+            <div class="persona-grid">
+                <div class="persona-card">
+                    <h4 style="color: var(--accent); font-size: 1.2rem; margin-bottom: 15px;">The Challenge</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; font-weight: 300;">Drivers found it difficult to place bids while driving. The number pad inputs were too small and prone to typo errors, causing bid placement frustrations.</p>
+                </div>
+                <div class="persona-card">
+                    <h4 style="color: var(--accent); font-size: 1.2rem; margin-bottom: 15px;">The Solution</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; font-weight: 300;">We designed a single swipe-action 'Quick Bid' slider configured with preset rates. This eliminated typing forms, allowing safe single-tap confirmations at rest stops.</p>
+                </div>
+            </div>
+            
+            <div class="overview-card" style="margin-top: 30px;">
+                <h4 style="color: var(--accent); font-size: 1.2rem; margin-bottom: 10px;">Key Takeaway</h4>
+                <p>Designing interface systems for transit environments requires robust safety constraints and simplified click paths. Reducing input complexities directly drives real-world user adoption and retention.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    CASE STUDY FOOTER NAVIGATION
+    ===================================================== -->
+    <section class="container">
+        <div class="case-study-nav">
+            <div class="cs-nav-btn prev-btn">
+                <span>Previous Project</span>
+                <a href="project-2.html">&larr; Dalmia Grain HRMS</a>
+            </div>
+            <div class="cs-nav-btn next-btn">
+                <span>Next Project</span>
+                <a href="project-4.html">Namami Gange Web &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    FOOTER
+    ===================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Varsha Chaurasiya. Case Study page.</p>
+                <p>Designed by Varsha Chaurasiya</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

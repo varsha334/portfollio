@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graphics Gallery Preview</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0b0b0c;
+            color: #ffffff;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        h1 {
+            text-align: center;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            background-color: #121214;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 16px;
+            text-align: center;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(162, 89, 255, 0.3);
+        }
+        img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 12px;
+            background-color: #1a1a1c;
+        }
+        p {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 15px;
+            font-family: monospace;
+            word-break: break-all;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 8px;
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Varsha Portfolio - Graphics Gallery Preview</h1>
+    <div class="grid">
+        <div class="card">
+            <img src="images/Graphics/ChatGPT%20Image%20May%2022,%202026,%2010_11_09%20AM%201.png" alt="Image 1">
+            <p>ChatGPT Image May 22, 2026, 10_11_09 AM 1.png</p>
+        </div>
+        <div class="card">
+            <img src="images/Graphics/Frame%201000005927.png" alt="Image 2">
+            <p>Frame 1000005927.png</p>
+        </div>
+        <div class="card">
+            <img src="images/Graphics/Frame%201000006048.png" alt="Image 3">
+            <p>Frame 1000006048.png</p>
+        </div>
+        <div class="card">
+            <img src="images/Graphics/Frame%201000006052.png" alt="Image 4">
+            <p>Frame 1000006052.png</p>
+        </div>
+        <div class="card">
+            <img src="images/Graphics/Group%201000005475.png" alt="Image 5">
+            <p>Group 1000005475.png</p>
+        </div>
+        <div class="card">
+            <img src="images/Graphics/Instagram%20post%20-%201.png" alt="Image 6">
+            <p>Instagram post - 1.png</p>
+        </div>
+        <div class="card">
+            <img src="images/Graphics/Instagram%20post%20-%2016.png" alt="Image 7">
+            <p>Instagram post - 16.png</p>
+        </div>
+        <div class="card">
+            <img src="images/Graphics/Instagram%20post%20-%203.png" alt="Image 8">
+            <p>Instagram post - 3.png</p>
+        </div>
+        <div class="card">
+            <img src="images/Graphics/Instagram%20post%20-%205.png" alt="Image 9">
+            <p>Instagram post - 5.png</p>
+        </div>
+        <div class="card">
+            <img src="images/Graphics/Instagram%20post%20-%207.png" alt="Image 10">
+            <p>Instagram post - 7.png</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Case Study: Dalmia Grower Agronomy Mobile App design by Varsha Chaurasiya.">
+    <title>Dalmia Grower App Case Study | Varsha Chaurasiya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        if (window.self !== window.top) {
+            document.documentElement.classList.add('is-iframe');
+        }
+        // Apply theme preference
+        const savedTheme = localStorage.getItem('theme') || 'dark-theme';
+        if (savedTheme === 'light-theme') {
+            document.documentElement.classList.add('light-theme');
+            document.addEventListener('DOMContentLoaded', () => {
+                document.body.classList.add('light-theme');
+            });
+        }
+    </script>
+</head>
+<body>
+
+    <!-- =====================================================
+    HEADER & NAVIGATION
+    ===================================================== -->
+    <header class="header scrolled">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">VARSHA<span>.</span></a>
+            <nav class="nav-menu">
+                <a href="index.html#home" class="nav-link">Home</a>
+                <a href="index.html#about" class="nav-link">About</a>
+                <a href="index.html#services" class="nav-link">Services</a>
+                <a href="index.html#portfolio" class="nav-link active">Portfolio</a>
+                <a href="index.html#experience" class="nav-link">Experience</a>
+                <a href="index.html#contact" class="nav-link">Contact</a>
+            </nav>
+            <div class="nav-cta">
+                <a href="index.html" class="btn btn-secondary" style="padding: 10px 22px; font-size: 0.85rem;">Back to Portfolio</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- =====================================================
+    HERO BANNER
+    ===================================================== -->
+    <section class="project-detail-hero" style="background-image: var(--hero-overlay), radial-gradient(circle at center, rgba(76, 175, 80, 0.15), transparent 70%);">
+        <div class="container project-hero-content">
+            <a href="index.html#portfolio" class="portfolio-readmore" style="margin-bottom: 20px; cursor: pointer;">
+                <svg width="16" height="16" viewBox="0 0 24 24" style="transform: rotate(180deg);"><path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                Back to All Projects
+            </a>
+            <span class="cs-subtitle">Mobile Application</span>
+            <h1 class="hero-title" style="margin-bottom: 20px;">Dalmia Grower App</h1>
+            
+            <div class="project-meta-grid">
+                <div class="project-meta-item">
+                    <h5>Role</h5>
+                    <p>Lead UI/UX Designer</p>
+                </div>
+                <div class="project-meta-item">
+                    <h5>Duration</h5>
+                    <p>4 Months (Q2 2025)</p>
+                </div>
+                <div class="project-meta-item">
+                    <h5>Tools</h5>
+                    <p>Figma, Adobe Photoshop, Canva</p>
+                </div>
+                <div class="project-meta-item">
+                    <h5>Industry</h5>
+                    <p>AgriTech / Enterprise Mobile</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    PROJECT OVERVIEW
+    ===================================================== -->
+    <section class="case-study-section">
+        <div class="container">
+            <div class="project-overview-grid">
+                <div class="overview-card">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                        The Problem
+                    </h3>
+                    <p>Sugarcane and grain growers face massive information asymmetry: monitoring soil parameters, diagnosing crop leaf infections in real-time, and recording log books manually. Lack of immediate agronomy support results in a 15% decrease in annual yield efficiency.</p>
+                    <p>Existing enterprise apps are too complex for rural growers, featuring high cognitive load, small touch targets, and complex text interfaces.</p>
+                </div>
+                <div class="overview-card">
+                    <h3>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+                        Business Goal
+                    </h3>
+                    <p>Build a localized mobile utility app that simplifies complex agronomy data (moisture, yield metrics, leaf diagnosis) into high-contrast visual tiles.</p>
+                    <p>Empower growers to identify leaf diseases instantly using an AI-based scanner, reducing crop diagnostic feedback time from days to under 10 seconds.</p>
+                </div>
+            </div>
+            
+            <div class="overview-card" style="margin-top: 30px;">
+                <h3>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    The Solution
+                </h3>
+                <p>We designed a high-contrast dark interface featuring large card layouts, intuitive icons, and color-coded statuses. The application contains an easy-to-use crop health scanner, interactive soil index trackers, and simplified log entries that require minimal typing.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    RESEARCH & STRATEGY
+    ===================================================== -->
+    <section class="case-study-section sec-alt">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Understand the User</span>
+                <h2 class="cs-title">Research & Personas</h2>
+            </div>
+            
+            <div class="persona-grid">
+                <!-- Persona 1 -->
+                <div class="persona-card">
+                    <div class="persona-header">
+                        <div class="persona-avatar">
+                            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        </div>
+                        <div class="persona-info">
+                            <h4>Ramesh Singh</h4>
+                            <p>42, Sugarcane Grower | Progressive Farmer</p>
+                        </div>
+                    </div>
+                    <div class="persona-details">
+                        <div class="persona-block">
+                            <h5>Goals</h5>
+                            <ul>
+                                <li>Track soil moisture levels on his phone without complex tools.</li>
+                                <li>Scan unhealthy sugarcane leaves to identify pests instantly.</li>
+                                <li>Log daily activities to report to the sugar factory admin.</li>
+                            </ul>
+                        </div>
+                        <div class="persona-block">
+                            <h5>Pain Points</h5>
+                            <ul>
+                                <li>Small text fonts are hard to read under bright direct sunlight.</li>
+                                <li>Slow internet connectivity makes complex media loading fail.</li>
+                                <li>Frustrated by apps requiring long typing forms.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- Persona 2 -->
+                <div class="persona-card">
+                    <div class="persona-header">
+                        <div class="persona-avatar">
+                            <svg viewBox="0 0 24 24"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                        </div>
+                        <div class="persona-info">
+                            <h4>Amit Chaurasia</h4>
+                            <p>29, Agronomy Field Officer | Auditor</p>
+                        </div>
+                    </div>
+                    <div class="persona-details">
+                        <div class="persona-block">
+                            <h5>Goals</h5>
+                            <ul>
+                                <li>Access farm data reports instantly on field visits.</li>
+                                <li>Verify grower crop disease logs on a unified portal.</li>
+                                <li>Approve yield forecasts submitted by growers.</li>
+                            </ul>
+                        </div>
+                        <div class="persona-block">
+                            <h5>Pain Points</h5>
+                            <ul>
+                                <li>Spends hours calling farmers to check soil diagnostics.</li>
+                                <li>Struggles with paper records that are frequently misplaced.</li>
+                                <li>Mismatched estimates of sugar factory supplies.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Journey & Flows -->
+            <div class="cs-title-wrap" style="margin-top: 60px; margin-bottom: 30px;">
+                <h3 class="cs-title" style="font-size: 1.5rem;">User Journey Mapping</h3>
+            </div>
+            
+            <div class="journey-map">
+                <table class="journey-table">
+                    <thead>
+                        <tr>
+                            <th>Phase</th>
+                            <th>1. Verification</th>
+                            <th>2. Farm Audit</th>
+                            <th>3. Crop Scanning</th>
+                            <th>4. Activity Logging</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>User Actions</strong></td>
+                            <td>Opens app at the farm field, checks dashboards.</td>
+                            <td>Reviews soil moisture indicators and alarms.</td>
+                            <td>Points camera at a damaged leaf, scans it.</td>
+                            <td>Inputs fertilizer logs and submits log files.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Thoughts</strong></td>
+                            <td>"Is the connection fast enough?"</td>
+                            <td>"Ah, moisture is 85%, looks healthy."</td>
+                            <td>"What pest is this? Let's check."</td>
+                            <td>"I want to write this fast and get back to work."</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Experience</strong></td>
+                            <td>🤩 Fast loading speeds.</td>
+                            <td>🤩 Easy color indicators.</td>
+                            <td>😐 Camera focus took 3 seconds.</td>
+                            <td>🤩 Visual tag choices.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cs-title-wrap" style="margin-top: 60px; margin-bottom: 30px;">
+                <h3 class="cs-title" style="font-size: 1.5rem;">Core User Flow</h3>
+            </div>
+            
+            <div class="user-flow-chart">
+                <div class="flow-node">Grower Dashboard</div>
+                <div class="flow-connector">&rarr;</div>
+                <div class="flow-node">AI Leaf Health Scanner</div>
+                <div class="flow-connector">&rarr;</div>
+                <div class="flow-node">Capture Photo</div>
+                <div class="flow-connector">&rarr;</div>
+                <div class="flow-node">Diagnose Disease & Pesticide Guide</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    WIREFRAMES & ARCHITECTURE
+    ===================================================== -->
+    <section class="case-study-section">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Structure</span>
+                <h2 class="cs-title">Information Architecture & Wireframes</h2>
+            </div>
+            <p style="color: var(--text-secondary); max-width: 700px; margin-bottom: 40px; font-weight: 300;">We mapped out a mobile hierarchy that keeps navigation actions visible on a bottom tab bar, ensuring easy single-handed navigation. Large touch points accommodate field usage.</p>
+            
+            <div class="visuals-container">
+                <!-- Wireframe 1 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder">
+                        <div class="wireframe-element title"></div>
+                        <div class="wireframe-element" style="width: 70%;"></div>
+                        <div class="wireframe-element image">
+                            <span style="font-size: 0.75rem; opacity: 0.5;">Crop Health Grid Dashboard</span>
+                        </div>
+                        <div class="wireframe-element"></div>
+                        <div class="wireframe-element" style="width: 60%;"></div>
+                    </div>
+                    <h5>Main Dashboard Layout</h5>
+                </div>
+                <!-- Wireframe 2 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder">
+                        <div class="wireframe-element title" style="width: 40%;"></div>
+                        <div class="wireframe-element image" style="height: 35%;">
+                            <span style="font-size: 0.75rem; opacity: 0.5;">Camera Viewfinder Screen</span>
+                        </div>
+                        <div class="wireframe-element" style="width: 80%; height: 20px; background-color: var(--accent-dim);"></div>
+                        <div class="wireframe-element"></div>
+                        <div class="wireframe-element" style="width: 50%;"></div>
+                    </div>
+                    <h5>AI Scanning Viewfinder</h5>
+                </div>
+                <!-- Wireframe 3 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder">
+                        <div class="wireframe-element title" style="width: 60%;"></div>
+                        <div class="wireframe-element" style="height: 15px;"></div>
+                        <div class="wireframe-element" style="height: 40px; border: 1px dashed var(--accent);">
+                            <span style="font-size: 0.75rem; color: var(--accent);">Soil Metrics Chart</span>
+                        </div>
+                        <div class="wireframe-element"></div>
+                        <div class="wireframe-element" style="width: 70%;"></div>
+                    </div>
+                    <h5>Soil Analytics Page</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    DESIGN SYSTEM & STYLE GUIDE
+    ===================================================== -->
+    <section class="case-study-section sec-alt">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Style Guide</span>
+                <h2 class="cs-title">Design System & Colors</h2>
+            </div>
+            
+            <div class="overview-card" style="margin-bottom: 40px;">
+                <h4 style="font-size: 1.2rem; font-weight: 600; margin-bottom: 15px;">Typography Standard</h4>
+                <p style="font-size: 1.5rem; font-weight: 700; color: #FFFFFF; font-family: 'Poppins', sans-serif;">Poppins - Bold, Semibold, Medium, Light</p>
+                <p style="font-size: 0.9rem; color: var(--text-secondary); margin-top: 5px;">Chosen for its excellent geometric balance and screen-read readability on small OLED screens.</p>
+            </div>
+            
+            <h4 style="font-size: 1.1rem; font-weight: 600; margin-bottom: 15px;">Color Palette</h4>
+            <div class="color-palette">
+                <div class="color-swatch">
+                    <div class="color-block" style="background-color: #4CAF50;"></div>
+                    <p>Agri Green</p>
+                    <span>#4CAF50</span>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-block" style="background-color: #FF7A00;"></div>
+                    <p>Alert Orange</p>
+                    <span>#FF7A00</span>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-block" style="background-color: #111111;"></div>
+                    <p>Dark Background</p>
+                    <span>#111111</span>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-block" style="background-color: #FFFFFF;"></div>
+                    <p>Primary Text</p>
+                    <span>#FFFFFF</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    HIGH FIDELITY SCREENS
+    ===================================================== -->
+    <section class="case-study-section">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Visuals</span>
+                <h2 class="cs-title">High-Fidelity Screens & Prototype</h2>
+            </div>
+            
+            <div class="visuals-container">
+                <!-- Screen 1 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder" style="background: radial-gradient(circle at center, rgba(76,175,80,0.15), var(--bg-card) 70%); border: 1px solid var(--accent-dim);">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40%; height: 40%; fill: #4CAF50;">
+                            <rect x="25" y="10" width="50" height="80" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="50" cy="20" r="4" fill="currentColor"/>
+                            <rect x="30" y="30" width="40" height="25" rx="3" fill="currentColor" opacity="0.3"/>
+                            <line x1="30" y1="62" x2="70" y2="62" stroke="currentColor" stroke-width="2"/>
+                            <line x1="30" y1="70" x2="60" y2="70" stroke="currentColor" stroke-width="2"/>
+                        </svg>
+                        <h4 style="margin-top: 10px; font-weight: 600; font-size: 0.9rem;">Grower Dashboard Page</h4>
+                    </div>
+                </div>
+                <!-- Screen 2 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder" style="background: radial-gradient(circle at center, rgba(76,175,80,0.15), var(--bg-card) 70%); border: 1px solid var(--accent-dim);">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40%; height: 40%; fill: #4CAF50;">
+                            <rect x="25" y="10" width="50" height="80" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="50" cy="20" r="4" fill="currentColor"/>
+                            <rect x="30" y="30" width="40" height="40" rx="4" fill="currentColor" opacity="0.3"/>
+                            <rect x="35" y="75" width="30" height="8" rx="4" fill="currentColor"/>
+                        </svg>
+                        <h4 style="margin-top: 10px; font-weight: 600; font-size: 0.9rem;">Leaf Scanner Interface</h4>
+                    </div>
+                </div>
+                <!-- Screen 3 -->
+                <div class="visual-item">
+                    <div class="visual-image-placeholder" style="background: radial-gradient(circle at center, rgba(76,175,80,0.15), var(--bg-card) 70%); border: 1px solid var(--accent-dim);">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="width: 40%; height: 40%; fill: #4CAF50;">
+                            <rect x="25" y="10" width="50" height="80" rx="6" fill="none" stroke="currentColor" stroke-width="2"/>
+                            <circle cx="50" cy="20" r="4" fill="currentColor"/>
+                            <path d="M35 50h30m-15-15v30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                        <h4 style="margin-top: 10px; font-weight: 600; font-size: 0.9rem;">Soil Moisture Index Panel</h4>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="overview-card" style="margin-top: 40px; text-align: center;">
+                <h4>Figma Interactive Prototype</h4>
+                <p style="margin-bottom: 20px;">We built a high-fidelity interactive mobile prototype in Figma detailing all leaf scanner capture sequences and agronomy report screens.</p>
+                <a href="https://figma.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open Figma Prototype</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    CHALLENGES & REFLECTIONS
+    ===================================================== -->
+    <section class="case-study-section sec-alt">
+        <div class="container">
+            <div class="cs-title-wrap">
+                <span class="cs-subtitle">Retrospective</span>
+                <h2 class="cs-title">Challenges, Solutions & Key Learnings</h2>
+            </div>
+            
+            <div class="persona-grid">
+                <div class="persona-card">
+                    <h4 style="color: var(--accent); font-size: 1.2rem; margin-bottom: 15px;">The Challenge</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; font-weight: 300;">Farmers found it difficult to scan leaves under bright sunlight due to screen glare and shadows, resulting in poor image alignment and scanner errors.</p>
+                </div>
+                <div class="persona-card">
+                    <h4 style="color: var(--accent); font-size: 1.2rem; margin-bottom: 15px;">The Solution</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.95rem; line-height: 1.7; font-weight: 300;">We designed a smart UI overlay box with high-contrast guides, auto-exposure detection, and an automatic audio prompt instructing farmers how to position the leaf to avoid glare.</p>
+                </div>
+            </div>
+            
+            <div class="overview-card" style="margin-top: 30px;">
+                <h4 style="color: var(--accent); font-size: 1.2rem; margin-bottom: 10px;">Key Takeaway</h4>
+                <p>Enterprise tools for field workers require testing in their direct environment. Designing for outdoor glare, physical dirt, and rural network delays helped us build a highly resilient agronomy mobile platform.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    CASE STUDY FOOTER NAVIGATION
+    ===================================================== -->
+    <section class="container">
+        <div class="case-study-nav">
+            <div class="cs-nav-btn prev-btn">
+                <span>Previous Project</span>
+                <a href="project-6.html">&larr; ATSP Learning Portal</a>
+            </div>
+            <div class="cs-nav-btn next-btn">
+                <span>Next Project</span>
+                <a href="project-2.html">Dalmia Grain HRMS &rarr;</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- =====================================================
+    FOOTER
+    ===================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Varsha Chaurasiya. Case Study page.</p>
+                <p>Designed by Varsha Chaurasiya</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
