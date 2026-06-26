@@ -78,11 +78,15 @@ RESET & BASE RULES
     -webkit-tap-highlight-color: transparent;
 }
 
+html, body {
+    overflow-x: hidden;
+    width: 100%;
+}
+
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);
     font-family: var(--font-primary);
-    overflow-x: hidden;
     line-height: 1.6;
 }
 
@@ -1322,6 +1326,7 @@ SINGLE-PAGE SHOWCASE MODAL OVERLAY
     visibility: hidden;
     transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s;
     overflow-y: auto;
+    overflow-x: hidden;
     padding: 40px 20px;
 }
 
@@ -2774,7 +2779,15 @@ RESPONSIVE DESIGN (MEDIA QUERIES)
     }
     
     .nav-cta {
-        display: none; /* Embedded or removed on mobile */
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 15px;
+        z-index: 1100;
+    }
+    
+    .nav-cta .btn {
+        display: none;
     }
     
     .hamburger.active span:nth-child(1) {
